@@ -10,7 +10,8 @@ typedef enum lh_http_method {
     LH_HTTP_METHOD_DELETE,
     LH_HTTP_METHOD_CONNECT,
     LH_HTTP_METHOD_OPTIONS,
-    LH_HTTP_METHOD_TRACE
+    LH_HTTP_METHOD_TRACE,
+    LH_HTTP_METHOD_UNKNOWN
 } lh_http_method;
 
 typedef struct lh_request {

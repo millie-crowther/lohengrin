@@ -17,6 +17,10 @@ typedef enum lh_http_method {
 typedef struct lh_request {
     lh_http_method method;
     const char * path;
+    const char * body;
 } lh_request;
+
+lh_request request_create(const char * request_string);
+void request_destroy(lh_request * request);
 
 #endif

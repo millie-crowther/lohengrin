@@ -2,10 +2,10 @@
 
 #include <string.h>
 
-struct method_name_mapping {
+typedef struct method_name_mapping {
     lh_http_method method;
     const char * string;
-};
+} method_name_mapping;
 
 static method_name_mapping method_map[] = {
     {LH_HTTP_METHOD_GET, "GET"},

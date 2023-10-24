@@ -35,5 +35,6 @@ lh_request request_create(const char * request_string){
 }
 
 void request_destroy(lh_request * request){
-    const char * first_line_regex = "(GET|POST|PATCH|PUT|DELETE|HEAD|OPTIONS|CONNECT|TRACE) (\/\S*) (HTTP\/1\.[01])";
+    const char * first_line_regex = "^(GET|POST|PATCH|PUT|DELETE|HEAD|OPTIONS|CONNECT|TRACE) (\/\S*) (HTTP\/1\.[01])";
+    const char * header_regex = "([a-zA-z\-]+): (.+)";
 }

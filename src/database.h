@@ -41,4 +41,27 @@ typedef struct lh_query {
 
 #define lh_limit(x) &(const uint64_t){x}
 
+typedef enum lh_database_type {
+    LH_DATABASE_TYPE_MYSQL,
+    LH_DATABASE_TYPE_POSTGRESQL
+} lh_database_type;
+
+typedef struct lh_database_connection {
+    lh_database_type database_type;
+    const char * host;
+    uint16_t port;
+    const char * username;
+    const char * password;
+} lh_database_connection;
+
+typedef struct lh_cursor {
+    lh_database_connection connection;
+} lh_cursor;
+
+typedef struct lh_query_result {
+
+} lh_query_result;
+
+lh_query_result cursor_execute_query(lh_cursor * cursor, lh_query * query);
+
 #endif

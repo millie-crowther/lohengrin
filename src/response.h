@@ -8,6 +8,6 @@ typedef struct lh_response {
     const char * body;
 } lh_response;
 
-const char * lh_response_get_name_for_code(uint16_t response_code)
+const char * lh_response_get_name_for_code(uint16_t response_code);
 
 #endif

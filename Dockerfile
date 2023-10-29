@@ -1,7 +1,7 @@
 FROM alpine:3.15.3
 
 # install dependencies
-RUN apk add --no-cache make cmake 
+RUN apk add --no-cache make cmake gcc musl-dev
 
 WORKDIR "/"
 # copy in source code 

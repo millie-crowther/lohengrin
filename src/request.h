@@ -21,6 +21,6 @@ typedef struct lh_request {
 } lh_request;
 
 lh_request request_create(const char * request_string);
-void request_destroy(lh_request * request);
+void request_destroy(lh_request request[static 1]);
 
 #endif

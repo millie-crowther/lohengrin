@@ -15,23 +15,6 @@ typedef struct lh_condition {
     struct lh_condition * sub_conditions[2];
 } lh_condition;
 
-lh_condition * lh_and(lh_condition * left, lh_condition * right){
-    lh_condition * result = malloc(sizeof(lh_condition));
-    *result = (lh_condition){
-        .sub_conditions = {left, right},
-        .text = "left text AND right text",
-    };
-    return result;
-}
-
-lh_condition * lh_equals_int(const char * field, int value){
-    lh_condition * result = malloc(sizeof(lh_condition));
-    *result = (lh_condition) {
-        .text = "field == value"
-    };
-    return result;
-}
-
 typedef struct lh_query {
     const char * select[LOHENGRIN_SELECT_COLUMN_MAX];
     const char * from;
@@ -62,6 +45,6 @@ typedef struct lh_query_result {
 
 } lh_query_result;
 
-lh_query_result cursor_execute_query(lh_cursor * cursor, lh_query * query);
+lh_query_result cursor_execute_query(lh_cursor cursor[static 1], lh_query query[static 1]);
 
 #endif

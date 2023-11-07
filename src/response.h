@@ -1,8 +1,6 @@
 #ifndef LOHENGRIN_RESPONSE_H
 #define LOHENGRIN_RESPONSE_H
 
-#include <stdint.h>
-
 typedef enum lh_http_response_code {
     LH_HTTP_OK = 200,
     LH_HTTP_CREATED = 201,
@@ -23,10 +21,10 @@ typedef enum lh_http_response_code {
 } lh_http_response_code;
 
 typedef struct lh_response {
-    uint16_t code;
+    lh_http_response_code code;
     const char * body;
 } lh_response;
 
-const char * lh_response_get_name_for_code(uint16_t response_code);
+const char * lh_response_get_name_for_code(lh_http_response_code response_code);
 
 #endif

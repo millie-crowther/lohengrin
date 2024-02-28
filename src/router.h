@@ -7,12 +7,6 @@
 #include "request.h"
 #include "response.h"
 
-typedef struct lh_context {
-
-} lh_context;
-
-typedef lh_response (*lh_route_handler)(const lh_request *, lh_context *);
-
 typedef struct lh_router_response {
     bool path_match_found;
     bool match_found;

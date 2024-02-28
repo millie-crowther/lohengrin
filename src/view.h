@@ -19,4 +19,6 @@ typedef struct lh_view {
     lh_handler options; // TODO: Default value for options
 } lh_view;
 
+lh_handler lh_view_get_handler_for_method(lh_view view, lh_http_method method);
+
 #endif

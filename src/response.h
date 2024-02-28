@@ -21,7 +21,7 @@ typedef enum lh_http_response_code {
 } lh_http_response_code;
 
 typedef struct lh_response {
-    lh_http_response_code code;
+    lh_http_response_code http_status_code;
     const char * body;
 } lh_response;
 

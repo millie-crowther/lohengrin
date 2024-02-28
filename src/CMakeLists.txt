@@ -10,7 +10,8 @@ set(SOURCES
     main.c
     request.c
     server.c
-        router.c
+    router.c
+    url.c
 )
 
 add_executable(lohengrin ${SOURCES})
